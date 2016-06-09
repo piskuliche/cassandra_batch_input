@@ -1,0 +1,136 @@
+# Run_Name
+AAA.BBB.gemc.out
+!--------------
+
+# Sim_Type
+GEMC
+!---------------
+
+# Nbr_Species
+1
+!----------------
+
+# VDW_Style
+LJ cut_tail 12.0
+LJ cut_tail 12.0
+!----------------
+
+# Charge_Style
+NONE
+NONE
+!----------------
+
+# Intra_Scaling
+0.0 0.0 0.0 1.0
+0.0 0.0 0.0 1.0
+
+# Mixing_Rule
+LB
+!----------------
+
+# Seed_Info
+CCC DDD
+!-------------------
+
+# Rcutoff_Low
+1.0
+!----------------
+
+# Molecule_Files
+molecule.mcf EEE
+!---------------
+
+# Box_Info
+2
+CUBIC
+FFF
+
+CUBIC
+GGG
+
+!-------------------------
+
+# Temperature_Info
+BBB BBB
+!-----------------
+
+# Move_Probability_Info
+
+# Prob_Translation
+0.4
+1.0
+1.0
+
+# Prob_Rotation
+0.22
+1.0
+1,0
+
+# Prob_Regrowth
+0.2
+1.0
+
+# Prob_Volume
+0.03
+200.0
+200.0
+
+# Prob_Swap
+0.15
+cbmc
+
+# Done_Probability_Info
+!----------------------
+
+# Start_Type
+make_config HHH 
+make_config III
+!------------------
+
+# Run_Type
+Equilibration    100 100
+!-----------------------update every 100 cycles
+
+# Average_Info
+1
+!-------------
+
+# Simulation_Length_Info
+Units        Sweeps
+Prop_Freq    1000
+Coord_Freq   50000
+Run          50000000
+Steps_Per_Sweep JJJ
+!--------------------
+
+# Property_Info 1 
+Energy_Total
+Nmols
+Density
+Volume
+Pressure
+
+# Property_Info 2
+Energy_Total
+Nmols
+Density
+Volume
+Pressure
+!----------------
+
+# Fragment_Files
+species1/frag1/frag1.dat  1
+species1/frag2/frag2.dat  2
+species1/frag3/frag3.dat  3
+species1/frag4/frag4.dat  4
+!---------------------------------------------------------one line per fragment
+
+# CBMC_Info
+kappa_ins 12
+kappa_rot 0
+kappa_dih 12
+rcut_cbmc 6.5 
+!------------
+
+
+END
